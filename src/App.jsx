@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Result from "./components/Result";
 import UserInput from "./components/UserInput";
@@ -32,6 +33,7 @@ function App() {
       ) : (
         <p className="center">Duration must be above 1</p>
       )}
+      <Footer/>
     </>
   );
 }
