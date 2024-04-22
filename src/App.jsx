@@ -12,6 +12,8 @@ function App() {
     duration: 10,
   });
 
+  const inputIsValid = userInput.duration >= 1;
+
   function handleChange(inputIdentifier, newValue) {
     setUserInput((prevUserInput) => {
       //we need the old data for the input's we have not changed. That is why we need the prev approuch.
@@ -25,7 +27,11 @@ function App() {
     <>
       <Header />
       <UserInput onChangeInput={handleChange} userInput={userInput} />
-      <Result input={userInput} />
+      {inputIsValid ? (
+        <Result input={userInput} />
+      ) : (
+        <p className="center">Duration must be above 1</p>
+      )}
     </>
   );
 }
