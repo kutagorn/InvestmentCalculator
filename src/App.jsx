@@ -17,7 +17,7 @@ function App() {
       //we need the old data for the input's we have not changed. That is why we need the prev approuch.
       return {
         ...prevUserInput, //we need to spread the old userInput state object, so we copy all the old values
-        [inputIdentifier]: newValue,
+        [inputIdentifier]: +newValue,
       };
     });
   }
